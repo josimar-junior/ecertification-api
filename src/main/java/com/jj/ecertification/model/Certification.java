@@ -28,8 +28,8 @@ public class Certification implements Serializable {
 	private static final long serialVersionUID = 7401315725720807199L;
 
 	@Id
-	@SequenceGenerator(name = "organization_seq", sequenceName = "organization_seq", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "organization_seq")
+	@SequenceGenerator(name = "certification_seq", sequenceName = "certification_seq", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "certification_seq")
 	@EqualsAndHashCode.Include
 	private Long id;
 	

@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("ecertification")
 public class EcertificationApiProperty {
 
-	private String allowedOrigin = "http://localhost:8000";
+	private String allowedOrigin = "http://localhost:4200";
 
 	private final Security security = new Security();
 	

@@ -42,8 +42,8 @@ public class CertificationRepositoryImpl implements CertificationRepositoryQuery
 
 	private void setParametersIfRequired(CertificationFilter filter, StringBuilder jpql, Map<String, Object> parameters) {
 		if(StringUtils.hasText(filter.getName())) {
-			jpql.append("and c.name like :name ");
-			parameters.put("name", "%" + filter.getName() + "%");
+			jpql.append("and lower(c.name) like :name ");
+			parameters.put("name", "%" + filter.getName().toLowerCase() + "%");
 		}
 		
 		if(StringUtils.hasText(filter.getExam())) {
