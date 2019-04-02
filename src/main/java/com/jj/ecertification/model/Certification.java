@@ -1,10 +1,12 @@
 package com.jj.ecertification.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -45,4 +47,7 @@ public class Certification implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "organization_id")
 	private Organization organization;
+	
+	@Column(precision = 10, scale = 2)
+	private BigDecimal percentage;
 }

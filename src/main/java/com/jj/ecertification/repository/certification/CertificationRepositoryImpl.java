@@ -22,7 +22,7 @@ public class CertificationRepositoryImpl implements CertificationRepositoryQuery
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<CertificationDTO> list(CertificationFilter filter) {
-		StringBuilder jpql = new StringBuilder("select new com.jj.ecertification.model.dto.CertificationDTO(c.id, c.name, c.exam) from Certification c where 1=1 ");
+		StringBuilder jpql = new StringBuilder("select new com.jj.ecertification.model.dto.CertificationDTO(c.id, c.name, c.exam, c.percentage) from Certification c where 1=1 ");
 		Map<String, Object> parameters = new HashMap<>();
 		
 		setParametersIfRequired(filter, jpql, parameters);
