@@ -30,6 +30,14 @@ public class UserResponse {
 	@JoinColumn(name = "certification_id")
 	private Certification certification;
 	
+	@ManyToOne
+	@JoinColumn(name = "historic_id")
+	private Historic historic;
+	
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
+	
 	private String questionNumber;
 	
 	private String items;
