@@ -15,6 +15,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
+import org.hibernate.annotations.Type;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -40,6 +42,9 @@ public class User implements Serializable {
 	
 	@NotBlank
 	private String password;
+	
+	@Type(type = "true_false")
+	private Boolean active;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "user_permission", joinColumns = @JoinColumn(name = "user_id"),
